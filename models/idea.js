@@ -6,10 +6,14 @@ const ideaSchema = new mongoose.Schema(
   {
     // createdBy: { type: ObjectId, ref: "User" },
     createdBy: String,
+    date: Number,
+    thumbnail: String,
+    videoUrl: String,
     title: String,
     subtitle: String,
     description: String,
-    date: Number
+    lookingFor: [String]
+    // upvotes: [{ type: ObjectId, ref: "User" }]
   },
   { timestamps: true }
 );
