@@ -1,6 +1,16 @@
 .navbar {
-    background: #3B0086;
-    a {
-        color: white;
+    .navbar-brand {
+        font-weight: bold;
     }
+  background: #3b0086;
+  a {
+    color: white;
+  }
+  .share-idea-btn {
+    background-color: #ef476f;
+    border-radius: 20px;
+    padding: 7px 15px !important;
+    margin-right: 10px;
+    // font-weight: bold;
+  }
 }
