@@ -13,8 +13,7 @@ mongoose.connect(dbUri);
 const ideaData = [
   {
     createdBy: "Karan",
-    title: "Ideally",
-    subtitle: "Find like-minded students to work on business ideas",
+    title: "Find like-minded students to work on business ideas",
     description: "Find like-minded students to work on business ideas and rmnomwpokdeofrjklsmkssk;s",
     date: moment().unix()
   }

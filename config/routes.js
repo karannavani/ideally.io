@@ -8,6 +8,7 @@ const ideaController = require('../controllers/ideaController');
 // ROUTES
 
 Router.route('/ideas')
-    .get(ideaController.index);
+    .get(ideaController.index)
+    .post(ideaController.create);
 
 module.exports = Router;

@@ -7,6 +7,14 @@ function ideasIndex(req, res, next) {
     .catch(next);
 }
 
+function ideasCreate(req, res, next) {
+    Idea
+    .create(req.body)
+    .then(idea => res.json(idea))
+    .catch(next);
+}
+
 module.exports = {
-    index: ideasIndex
+    index: ideasIndex,
+    create: ideasCreate
 }
