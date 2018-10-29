@@ -14,7 +14,15 @@ function ideasCreate(req, res, next) {
     .catch(next);
 }
 
+function ideasDelete(req, res, next) {
+    Idea.findById(req.params.id)
+        .then(idea => idea.remove())
+        .then(() => res.sendStatus(204))
+        .catch(next);
+}
+
 module.exports = {
     index: ideasIndex,
-    create: ideasCreate
+    create: ideasCreate,
+    delete: ideasDelete
 }

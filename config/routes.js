@@ -11,4 +11,7 @@ Router.route('/ideas')
     .get(ideaController.index)
     .post(ideaController.create);
 
+Router.route('/ideas/:id')
+    .delete(ideaController.delete);
+
 module.exports = Router;
