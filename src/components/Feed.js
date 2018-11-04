@@ -25,7 +25,7 @@ export default class Feed extends React.Component {
     return <Container className="feed-content">
         <Row className="justify-content-center">
           {this.state.ideas && this.state.ideas.map(ideas => (
-              <Col className="col-8" key={ideas._id}>
+              <Col className="col-11 col-lg-8 col-md-8" key={ideas._id}>
                 <Card body className="feed-card">
                   <CardTitle>{ideas.title}</CardTitle>
                   <CardText>{ideas.description}</CardText>
@@ -33,7 +33,7 @@ export default class Feed extends React.Component {
                   <p>
                     Looking for{" "}
                     {ideas.lookingFor.map((skill, i) => (
-                      <Badge color="primary" key={i}>
+                  <Badge key={i}>
                         {skill}
                       </Badge>
                     ))}

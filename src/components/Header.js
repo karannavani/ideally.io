@@ -12,6 +12,7 @@ import {
   DropdownMenu,
   DropdownItem
 } from "reactstrap";
+import { Link, withRouter } from "react-router-dom";
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -34,15 +35,18 @@ export default class Header extends React.Component {
           <NavbarBrand href="/">IDEALLY</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
+
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/" className="share-idea-btn">Share an idea</NavLink>
+                <NavLink href="/new" className="share-idea-btn">Share an idea</NavLink>
               </NavItem>
+
               <NavItem>
                 <NavLink href="https://github.com/reactstrap/reactstrap">
                   What is this?
                 </NavLink>
               </NavItem>
+             
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Profile
@@ -54,6 +58,7 @@ export default class Header extends React.Component {
                   <DropdownItem>Log Out</DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
+
             </Nav>
           </Collapse>
         </Navbar>
