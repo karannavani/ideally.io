@@ -4,8 +4,8 @@ const mongoose = require('mongoose');
 
 const ideaSchema = new mongoose.Schema(
   {
-    // createdBy: { type: ObjectId, ref: "User" },
-    createdBy: String,
+    // postedBy: { type: ObjectId, ref: "User" },
+    postedBy: String,
     date: Number,
     title: String,
     description: String,

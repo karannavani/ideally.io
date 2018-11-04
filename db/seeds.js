@@ -12,7 +12,8 @@ mongoose.connect(dbUri);
 
 const ideaData = [
   {
-    createdBy: "Karan",
+    postedBy: "Karan",
+    lookingFor: ['Developers', 'Marketers'],
     title: "Find like-minded students to work on business ideas",
     description: "Find like-minded students to work on business ideas and rmnomwpokdeofrjklsmkssk;s",
     date: moment().unix()
