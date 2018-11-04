@@ -21,8 +21,17 @@ function ideasDelete(req, res, next) {
         .catch(next);
 }
 
+function ideasUpdate(req, res, next) {
+    Idea.findById(req.params.id)
+    .then(idea => idea.set(req.body))
+    .then(idea => idea.save())
+    .then(idea => res.json(idea))
+    .catch(next)
+}
+
 module.exports = {
     index: ideasIndex,
     create: ideasCreate,
-    delete: ideasDelete
+    delete: ideasDelete,
+    update: ideasUpdate
 }
