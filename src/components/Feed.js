@@ -12,23 +12,17 @@ export default class Feed extends React.Component {
   }
 
   render() {
-    return (
-
-    <Container>
-      { this.state.ideas && this.state.ideas.map(ideas => 
-        // <div key={ideas._id}>{ideas.createdBy} – {ideas.title}</div>
-          <Card body>
-            <CardTitle>{ideas.title}</CardTitle>
-            <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-            <Button>Go somewhere</Button>
-          </Card>
-
-          
-        )
-  
-      }
-    </Container>
-
-    );
+    return <Container>
+        {this.state.ideas && this.state.ideas.map(ideas => (
+            <Card body key={ideas._id}>
+              <CardTitle>{ideas.title}</CardTitle>
+              <CardText>
+                With supporting text below as a natural lead-in to
+                additional content.
+              </CardText>
+              <Button>Go somewhere</Button>
+            </Card>
+          ))}
+      </Container>;
   }
 }
