@@ -4,6 +4,7 @@ const Router = express.Router();
 // CONTROLLERS
 
 const ideaController = require('../controllers/ideaController');
+const userController = require('../controllers/userController');
 
 // ROUTES
 

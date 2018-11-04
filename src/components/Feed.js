@@ -29,7 +29,7 @@ export default class Feed extends React.Component {
                 <Card body className="feed-card">
                   <CardTitle>{ideas.title}</CardTitle>
                   <CardText>{ideas.description}</CardText>
-                  <p>Posted by {ideas.postedBy}</p>
+                  <p>Posted by {ideas.postedBy.username}</p>
                   <p>
                     Looking for{" "}
                     {ideas.lookingFor.map((skill, i) => (

@@ -1,11 +1,10 @@
 const mongoose = require('mongoose');
-// const ObjectId = mongoose.Schema.Types.ObjectId;
+const ObjectId = mongoose.Schema.Types.ObjectId;
 
 
 const ideaSchema = new mongoose.Schema(
   {
-    // postedBy: { type: ObjectId, ref: "User" },
-    postedBy: String,
+    postedBy: { type: ObjectId, ref: 'User' },
     date: Number,
     title: String,
     description: String,
