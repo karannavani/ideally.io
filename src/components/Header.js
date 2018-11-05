@@ -29,16 +29,16 @@ export default class Header extends React.Component {
     });
   }
   render() {
-    return (
-      <div>
-        <Navbar expand="md">
+    return <div>
+        <Navbar expand="md" className="fixed-top">
           <NavbarBrand href="/">IDEALLY</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
-
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/new" className="share-idea-btn">Share an idea</NavLink>
+                <NavLink href="/new" className="share-idea-btn">
+                  Share an idea
+                </NavLink>
               </NavItem>
 
               <NavItem>
@@ -46,7 +46,7 @@ export default class Header extends React.Component {
                   What is this?
                 </NavLink>
               </NavItem>
-             
+
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Profile
@@ -58,11 +58,9 @@ export default class Header extends React.Component {
                   <DropdownItem>Log Out</DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-
             </Nav>
           </Collapse>
         </Navbar>
-      </div>
-    );
+      </div>;
   }
 }

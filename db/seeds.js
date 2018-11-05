@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const moment = require("moment");
 
 // MODELS
 const Idea = require("../models/idea");
@@ -21,14 +20,12 @@ const userIds = [
 const ideaData = [
   {
     postedBy: userIds[0],
-    date: moment().unix(),
     title: "Idea sharing platform",
     description: "Find like-minded students to work on business ideas",
     lookingFor: ["Developers", "Marketers"]
   },
   {
     postedBy: userIds[1],
-    date: moment().unix(),
     title: "Weight carrying drones",
     description: "Drones that carry your luggage for you",
     lookingFor: ["Drone experts"]

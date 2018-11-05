@@ -9,12 +9,10 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <div className="app-body">
           <Switch>
             <Route exact path="/" component={Feed} />
             <Route path="/new" component={CreateForm} />
           </Switch>
-        </div>
       </div>
     );
   }

@@ -5,7 +5,6 @@ const ObjectId = mongoose.Schema.Types.ObjectId;
 const ideaSchema = new mongoose.Schema(
   {
     postedBy: { type: ObjectId, ref: 'User' },
-    date: Number,
     title: String,
     description: String,
     lookingFor: [String]

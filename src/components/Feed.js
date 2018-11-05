@@ -16,8 +16,12 @@ export default class Feed extends React.Component {
   componentDidMount() {
     axios
       .get("/api/ideas")
-      .then(res =>
+      .then(res => {
+        res.data = res.data.sort(function (a, b) {
+          return new Date(b.createdAt) - new Date(a.createdAt);
+        });
         this.setState({ ideas: res.data }, () => console.log(this.state.ideas))
+      }
       );
   }
 
