@@ -37,7 +37,7 @@ const userData = [
     _id: userIds[0],
     username: "karannavani",
     email: "kknavani@gmail.com",
-    pass: "pass",
+    password: "pass",
     firstName: "Karan",
     lastName: "Navani",
     age: "20"
@@ -46,7 +46,7 @@ const userData = [
     _id: userIds[1],
     username: "prateekawasthi",
     email: "prateek@gmail.com",
-    pass: "pass",
+    password: "pass",
     firstName: "Prateek",
     lastName: "Awasthi",
     age: "21"

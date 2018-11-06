@@ -21,7 +21,7 @@ const userSchema = new mongoose.Schema(
 
 userSchema.pre('save', function hashPassword(next) {
   if (this.isModified('password')) {
-    this.pasword = bcrypt.hashSync(this.password, 8);
+    this.password = bcrypt.hashSync(this.password, 8);
   }
   next();
 })
@@ -29,5 +29,6 @@ userSchema.pre('save', function hashPassword(next) {
 userSchema.methods.validatePassword = function(password) {
   return bcrypt.compareSync(password, this.password);
 };
+
 
 module.exports = mongoose.model("User", userSchema);
