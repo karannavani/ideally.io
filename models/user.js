@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+const bcrypt = require("bcrypt");
+
 
 const userSchema = new mongoose.Schema(
   {
@@ -9,10 +11,23 @@ const userSchema = new mongoose.Schema(
 
     // Personal Details
     firstName: { type: String },
-    surname: { type: String },
+    lastName: { type: String },
     age: { type: Number }
   },
   { timestamps: true }
 );
+
+// METHODS
+
+userSchema.pre('save', function hashPassword(next) {
+  if (this.isModified('password')) {
+    this.pasword = bcrypt.hashSync(this.password, 8);
+  }
+  next();
+})
+
+userSchema.methods.validatePassword = function(password) {
+  return bcrypt.compareSync(password, this.password);
+};
 
 module.exports = mongoose.model("User", userSchema);
