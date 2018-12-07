@@ -29,9 +29,9 @@ export default class Header extends React.Component {
     });
   }
   render() {
-    return <div>
+    return <header>
         <Navbar expand="md" className="fixed-top">
-          <NavbarBrand href="/">IDEALLY</NavbarBrand>
+          <NavbarBrand href="/">ideally</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -47,7 +47,13 @@ export default class Header extends React.Component {
                 </NavLink>
               </NavItem>
 
-              <UncontrolledDropdown nav inNavbar>
+              <NavItem>
+                <NavLink href="https://github.com/reactstrap/reactstrap">
+                  Log in 
+                </NavLink>
+              </NavItem>
+
+              {/* <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Profile
                 </DropdownToggle>
@@ -57,10 +63,10 @@ export default class Header extends React.Component {
                   <DropdownItem divider />
                   <DropdownItem>Log Out</DropdownItem>
                 </DropdownMenu>
-              </UncontrolledDropdown>
+              </UncontrolledDropdown> */}
             </Nav>
           </Collapse>
         </Navbar>
-      </div>;
+      </header>;
   }
 }

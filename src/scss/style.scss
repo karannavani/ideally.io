@@ -1,12 +1,17 @@
 body {
   background: #f9f9f9;
-  margin-top: 100px;
+}
+
+header {
+  height: 190px;
+  background: #DA1552;
+  margin-bottom: 50px;
 }
 .navbar {
     .navbar-brand {
         font-weight: bold;
     }
-  background: #007B76;
+  background: #DA1552;
   a {
     color: white;
   }
@@ -26,4 +31,11 @@ body {
 
 .feed-card {
   margin-bottom: 20px;
+  height: 400px;
+}
+
+@media (max-width: 575.98px) {
+  .feed-content {
+    padding: 0 28px;
+  }
 }
